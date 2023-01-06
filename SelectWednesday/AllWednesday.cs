@@ -19,7 +19,7 @@ namespace SelectWednesday
 		public static string Wednesday()
         {
             int Day = 7; //一周7天
-			int week = 52;//一年52周
+			
             string result =string.Empty;
 
             DateTime dtbegin = new DateTime(2023, 1, 1); //起始日
@@ -38,11 +38,10 @@ namespace SelectWednesday
 				dtbegin = dtbegin.AddDays(1);
 			}
 
-			for (int j = 1; j <= week; j++)
+			for (int j = 1; dtbegin < dtend; j++)
 			{
 				dtbegin = dtbegin.AddDays(7);
-				if( dtbegin < dtend) result += dtbegin.ToString("yyyy/MM/dd") + "\n";
-
+				if( dtbegin < dtend)result += dtbegin.ToString("yyyy/MM/dd") + "\n";
 			}
 
 			return result;
