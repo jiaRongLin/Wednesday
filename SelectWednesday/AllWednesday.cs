@@ -40,7 +40,7 @@ namespace SelectWednesday
 
 			for (int j = 1; j <= week; j++)
 			{
-				if (dtbegin < dtend) dtbegin = dtbegin.AddDays(7);
+				dtbegin = dtbegin.AddDays(7);
 				if( dtbegin < dtend) result += dtbegin.ToString("yyyy/MM/dd") + "\n";
 
 			}
